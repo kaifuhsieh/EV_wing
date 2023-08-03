@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/ev_wing.min.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <title>EV Wing</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- page_01 -->
+        <section id="page_01" class="page_01">
+            <div class="container">
+                <div class="spot wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.25s">
+                    <span>Spot A001</span>
+                </div>
+                <h2 class="page_title wow fadeInUp" data-wow-duration="1.75s" data-wow-delay="1.45s">Welcome to EV Wing!
+                </h2>
+                <div class="ev_car wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.65s">
+                    <img src="images/ev_car.png" alt="" />
+                </div>
+                <div class="btn_grp wow fadeInUp" data-wow-duration="1.25s" data-wow-delay="1.85s">
+                    <button type="button" id="p1_button">Click to Start</button>
+                </div>
+            </div>
+        </section>
+        <!-- show page 03~ 05 https://stackoverflow.com/questions/65292112/blocking-show-then-hide-after-n-seconds-with-jquery -->
+        <!-- page_02 -->
+        <section id="page_02" class="page_02 hidden">
+            <div class="container">
+                <h2 class="page_title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.45s">Select Your Payment
+                    Type</h2>
+                <div class="choose">
+                    <div class="info_panel wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.65s">
+                        <div class="item">
+                            <img src="images/icon_power.svg" alt=""> Power :<span>150</span>kW
+                        </div>
+                        <div class="item">
+                            <img src="images/icon_money_s.svg" alt=""> Rate :<span>10</span>cents／per kWh
+                        </div>
+                    </div>
+                    <a href="#" id="p2_button_1" class="btn_choose wow fadeInLeftBig" data-wow-duration="1.25s"
+                        data-wow-delay="1.5s">
+                        <h3>
+                            <img src="images/icon_payment_01.svg" alt=""> NFC Payments
+                        </h3>
+                        <p>Please hold your card or device to the reader.</p>
+                        <div class="pay_block">
+                            <div class="item">
+                                <img src="images/btn_applepay.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/btn_gpay.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/btn_samsungpay.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/btn_mastercard.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/btn_visa.jpg" alt="">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" id="p2_button_2" class="btn_choose wow fadeInRightBig" data-wow-duration="1.25s"
+                        data-wow-delay="1.5s">
+                        <h3><img src="images/icon_payment_02.svg" alt="">Digital Payments</h3>
+                        <p>Please scan your QR Code with the scanner.</p>
+                        <div class="pay_block">
+                            <div class="item">
+                                <img src="images/btn_paypal.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/btn_cashapp.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/btn_visa.jpg" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- page_03 -->
+        <section id="page_03" class="page_03 hidden">
+            <div class="container">
+                <h2 class="page_title wow fadeInUp" data-wow-duration="1.75s" data-wow-delay="1.45s">Processing the
+                    card<br> pre-authorization... </h2>
+                <!-- loading -->
+                <div class="loading_spin wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.65s">
+                    <div id="spin">
+                        <svg class="progress" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="42" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="information wow fadeIn" data-wow-duration="1.25s" data-wow-delay="1.75s">
+                    <p>For card validation and sufficient funds, we'll request a $1000 <br> pre-authorization hold from
+                        your issuing bank.<br>The actual charge will depend on your charging amount.</p>
+                </div>
+            </div>
+        </section>
+        <!-- page_04 -->
+        <section id="page_04" class="page_04 hidden">
+            <div class="container">
+                <h2 class="page_title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.45s">Pre-authorization
+                    <br>Successful !</h2>
+                <!-- loading -->
+                <div class="pay_check wow bounceInUp" data-wow-duration="1s" data-wow-delay="1.65s">
+                    <img src="images/pay_check.svg" alt="">
+                </div>
+                <div class="information wow fadeIn" data-wow-duration="1.25s" data-wow-delay="1.75s">
+                    <p>For card validation and sufficient funds, we'll request a $1000 <br> pre-authorization hold from
+                        your issuing bank.<br> The actual charge will depend on your charging amount.</p>
+                </div>
+            </div>
+        </section>
+        <!-- page_05 -->
+        <section id="page_05" class="page_05 hidden">
+            <div class="container">
+                <h2 class="page_title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.45s">Select Your
+                    Charging<br>Connector Type</h2>
+                <div class="choose">
+                    <a href="#" id="p5_button_1" class="btn_choose wow fadeInLeftBig" data-wow-duration="1.25s"
+                        data-wow-delay="1.5s">
+                        <h3>CCS1<small>(LEFT SIDE)</small></h3>
+                        <img src="images/ccs1.png" alt="">
+                    </a>
+                    <a href="#" id="p5_button_2" class="btn_choose wow fadeInRightBig" data-wow-duration="1.25s"
+                        data-wow-delay="1.5s">
+                        <h3>CCS2<small>(RIGHT SIDE)</small></h3>
+                        <img src="images/ccs2.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- page_06 -->
+        <section id="page_06" class="page_06 hidden">
+            <div class="container">
+                <h2 class="page_title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.45s">Ready to Start
+                    Charging </h2>
+                <div class="charging wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.65s">
+                    <img src="images/charging.png" alt="" class="wow fadeInLeft" data-wow-duration="1s"
+                        data-wow-delay="1.65s" />
+                </div>
+                <div class="notice wow fadeIn" data-wow-duration="1.25s" data-wow-delay="1.75s">
+                    <p>Please plug the connector into the EV.</p>
+                </div>
+            </div>
+        </section>
+        <!-- page_07 -->
+        <section id="page_07" class="page_07 hidden">
+            <div class="container">
+                <div class="charging_status">
+                    <div class="now">
+                        <!-- 電量 -->
+                        <div class="electricity">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
+                                <symbol id="wave">
+                                    <path
+                                        d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z">
+                                    </path>
+                                    <path
+                                        d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z">
+                                    </path>
+                                    <path
+                                        d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z">
+                                    </path>
+                                    <path
+                                        d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z">
+                                    </path>
+                                </symbol>
+                            </svg>
+                            <div class="box">
+                                <div class="battery"></div>
+                                <div class="percent">
+                                    <div class="percentNum" id="count">0</div>
+                                    <div class="percentB">%</div>
+                                </div>
+                                <div class="level">Charge Level</div>
+                                <div id="water" class="water">
+                                    <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                                        <use xlink:href="#wave"></use>
+                                    </svg>
+                                    <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                                        <use xlink:href="#wave"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.45s">
+                            <img src="images/charging_car.png" alt="">
+                        </div>
+                    </div>
+                    <div class="dash_board">
+                        <div class="charging_info wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                            <ul>
+                                <li>
+                                    <span>Energy Charged (kWh)</span><em>3</em><span>kWh</span>
+                                </li>
+                                <li>
+                                    <span>Duration</span><em>2</em><span>min</span><em>57</em><span>s</span>
+                                </li>
+                                <li>
+                                    <span>Charge Amount</span><em>30</em><span>cents</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="charging_info wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.25s">
+                            <ul>
+                                <li>
+                                    <span>Current Power</span><em>120</em><span>kWh</span>
+                                </li>
+                                <li>
+                                    <span>Voltage</span><em>384</em><span>v</span>
+                                </li>
+                                <li>
+                                    <span>Current</span><em>312.5</em><span>A</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="not_yet wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <img src="images/not_yet.svg" alt="">
+                            <p>The EV is not fully charged. Slide to the bottom to confirm finishing charging.</p>
+                        </div>
+                        <div class="btn_grp wow fadeInUp" data-wow-duration="1.25s" data-wow-delay="1.85s">
+                            <button id="p7_button" type="button">Finish Charging</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- page_08 -->
+        <section id="page_08" class="page_08 hidden">
+            <div class="container">
+                <h2 class="page_title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.45s">Charging Cost</h2>
+                <div class="bill wow bounceInUp" data-wow-duration="1s" data-wow-delay="1.65s">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="images/icon_money.svg" alt="">
+                        </div>
+                        <div class="dollar">
+                            <span>3</span><em>USD</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice wow fadeIn" data-wow-duration="1.25s" data-wow-delay="1.75s">
+                    <p>Payment processing, please wait.</p>
+                </div>
+            </div>
+        </section>
+        <!-- page_09 -->
+        <section id="page_09" class="page_09 hidden">
+            <div class="container">
+                <h2 class="page_title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.45s">Payment Successful !
+                </h2>
+                <div class="ok  wow bounceInUp" data-wow-duration="1s" data-wow-delay="1.65s">
+                    <img src="images/check.svg" alt="">
+                </div>
+                <div class="notice wow fadeIn" data-wow-duration="1.25s" data-wow-delay="1.75s">
+                    <p>Please unplug and return the charging connector.<br> Thank you ! Have a safe trip !</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/ev_charging_demo.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<!-- battery -->
+<script>
+
+</script>
+
+</html>
