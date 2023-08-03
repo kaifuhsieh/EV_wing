@@ -1,4 +1,16 @@
 $(function () {
+    // home
+    let stopExecution = false;
+
+    // home
+    const refreshPage = () => {
+        stopExecution = true; // 設定變數為 true 來終止事件的執行
+        location.reload();
+    };
+
+    const refreshButton = document.getElementById('refreshButton');
+    refreshButton.addEventListener('click', refreshPage);
+
     //page_01
     $('#p1_button').click(function (e) {
         $('#page_01').stop().fadeOut();
@@ -90,4 +102,15 @@ $(function () {
         }, 5000);
         e.preventDefault();
     });
+    // 秒數
+    // 使用箭頭函式取得現在秒數
+    const updateSeconds = () => {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const secondsDisplay = document.getElementById('secondsDisplay');
+        secondsDisplay.textContent = seconds;
+    };
+
+    // 每秒呼叫一次updateSeconds函式
+    setInterval(updateSeconds, 1000);
 });
