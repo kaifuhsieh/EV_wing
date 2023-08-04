@@ -241,19 +241,19 @@ h2.page_title {
 
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             max-height: 360px;
-            margin-bottom: 1em;
+            margin-bottom: 2em;
         }
 
         img {
             max-height: auto;
-            max-height: 400px;
+            max-height: 420px;
 
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
-                max-height: 360px;
+                max-height: 380px;
             }
 
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
-                max-height: 320px;
+                max-height: 360px;
             }
         }
     }
