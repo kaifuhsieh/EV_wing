@@ -10,6 +10,42 @@ $(function () {
 
     const refreshButton = document.getElementById('refreshButton');
     refreshButton.addEventListener('click', refreshPage);
+    //------------------------------------------------------------- back_to_page1
+    const backToPage01 = () => {
+        // 隱藏其他頁面
+        $('#page_02, #page_03, #page_04, #page_05, #page_06, #page_07, #page_08, #page_09').addClass('hidden');
+        // 顯示 page_01
+        $('#page_01').stop().show().removeClass('hidden');
+
+        // 初始化 wow.js 動畫
+        new WOW().init();
+    };
+
+    // 點擊返回按鈕觸發事件
+    $('#back_to_page01').click(function (e) {
+        e.preventDefault();
+        backToPage01();
+    });
+    // 初始化 wow.js 動畫
+    // new WOW().init();
+    //------------------------------------------------------------- back_to_page2
+    const backToPage02 = () => {
+        // 隱藏其他頁面
+        $('#page_01, #page_03, #page_04, #page_05, #page_06, #page_07, #page_08, #page_09').addClass('hidden');
+        // 顯示 page_01
+        $('#page_02').stop().show().removeClass('hidden');
+
+        // 初始化 wow.js 動畫
+        new WOW().init();
+    };
+
+    // 點擊返回按鈕觸發事件
+    $('#back_to_page02').click(function (e) {
+        e.preventDefault();
+        backToPage02();
+    });
+    // 初始化 wow.js 動畫
+    // new WOW().init();
 
     //page_01
     $('#p1_button').click(function (e) {

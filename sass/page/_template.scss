@@ -31,7 +31,8 @@ $breakpoint_L: 1440px;
         padding: 2em 1.5em;
     }
 
-    .home {
+    .home,
+    .back {
         position: fixed;
         width: 5em;
         bottom: 0.75em;
@@ -75,6 +76,32 @@ $breakpoint_L: 1440px;
             font-weight: bold;
             margin: 0;
             padding-bottom: 0.25em;
+        }
+    }
+    .back {
+        left: 0.75em;
+        right: auto;
+        &:hover,
+        &:focus {
+            background-color: $primaryColor;
+
+            span {
+                color: #fff;
+            }
+
+            .img-container {
+                background: url(../images/back_white_icon.svg) no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .img-container {
+            width: 70%;
+            aspect-ratio: 1/1;
+            margin: 0 auto;
+            background: url(../images/back_icon.svg) no-repeat center center;
+            background-size: contain;
+            margin-bottom: 0.15em;
         }
     }
 }
@@ -191,9 +218,7 @@ h2.page_title {
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: 100%;
-        max-width: 720px;
-        button {
-        }
+        max-width: 600px;
     }
 
     h2.page_title {
