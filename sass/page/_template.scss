@@ -1,8 +1,10 @@
 * {
     box-sizing: border-box;
 }
+
 $breakpoint_XL: 1441px;
 $breakpoint_L: 1440px;
+
 %container {
     display: flex;
     justify-content: center;
@@ -20,35 +22,42 @@ $breakpoint_L: 1440px;
     background: url(../images/ev_wing_light_bg.jpg) no-repeat center bottom #e3e3e3;
     background-size: cover;
     padding: 3em 2em;
+
     @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
         padding: 2em 1.5em;
     }
+
     @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
         padding: 2em 1.5em;
     }
+
     .home {
         position: fixed;
         width: 5em;
-        bottom: 0.5em;
-        right: 0.5em;
+        bottom: 0.75em;
+        right: 0.75em;
         min-height: 5em;
         display: block;
         text-decoration: none;
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: rgba(255, 255, 255, 1);
         text-align: center;
         border-radius: 0.5em;
         z-index: 999999;
+
         &:hover,
         &:focus {
             background-color: $primaryColor;
+
             span {
                 color: #fff;
             }
+
             .img-container {
                 background: url(../images/home_white_icon.svg) no-repeat center center;
                 background-size: contain;
             }
         }
+
         .img-container {
             width: 70%;
             aspect-ratio: 1/1;
@@ -57,6 +66,7 @@ $breakpoint_L: 1440px;
             background-size: contain;
             margin-bottom: 0.15em;
         }
+
         span {
             display: block;
             color: $primaryColor;
@@ -86,9 +96,11 @@ h2.page_title {
     font-weight: bold;
     font-family: 'Arial';
     text-align: center;
+
     @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
         font-size: 5em;
     }
+
     @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
         font-size: 4em;
         margin: 0.25em 0 0.25em;
@@ -105,18 +117,23 @@ h2.page_title {
     button {
         background-color: $lightColor;
         color: #000000;
-        font-size: 4em;
+        font-size: 3.6em;
         border: none;
         padding: 0.5em 2em;
         border-radius: 3em;
         font-weight: bold;
         transition: 0.3s ease-out;
+        width: 100%;
+        white-space: nowrap;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             font-size: 3.6em;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             font-size: 2.5em;
         }
+
         &:hover,
         &:focus {
             box-shadow: rgba($lightColor, 0.42) 0px 2px 34px 0px, rgba($lightColor, 0.82) 0px 2px 66px 0px;
@@ -144,12 +161,15 @@ h2.page_title {
         flex-basis: auto;
         margin: 1em 0 3em;
         text-align: center;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             margin: 1em 0 2em;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             margin: 1em 0;
         }
+
         span {
             background-color: $primaryColor;
             padding: 0.75em 1em 0.5em;
@@ -157,43 +177,68 @@ h2.page_title {
             border-radius: 3em;
             font-size: 2em;
             font-weight: bold;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 font-size: 1.5em;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 font-size: 1.25em;
             }
         }
     }
+    .btn_grp {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        max-width: 720px;
+        button {
+        }
+    }
 
     h2.page_title {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
 
     .ev_car {
         text-align: center;
-        max-height: 400px;
+        max-height: 420px;
         position: relative;
         margin-bottom: 2em;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100%;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
+            max-height: 400px;
+            margin-bottom: 1em;
+        }
+
+        @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             max-height: 360px;
             margin-bottom: 1em;
         }
-        @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
-            max-height: 320px;
-            margin-bottom: 1em;
-        }
+
         img {
             max-height: auto;
             max-height: 400px;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 max-height: 360px;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 max-height: 320px;
             }
         }
     }
+
+    // .btn_grp {
+    //     button {
+    //         width: 80%;
+    //         max-width: 980px;
+    //     }
+    // }
 }
 
 // page_02
@@ -212,12 +257,15 @@ h2.page_title {
         padding: 0 3em;
         flex-flow: row wrap;
         max-width: 1400px;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             padding: 0 2em;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             padding: 0 1em;
         }
+
         .info_panel {
             flex-grow: 0;
             flex-shrink: 1;
@@ -227,12 +275,15 @@ h2.page_title {
             padding: 1em 2em;
             display: flex;
             margin: 0 2em 3em;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 margin: 0 2% 2em;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 margin: 0 2% 2em;
             }
+
             .item {
                 flex-grow: 0;
                 flex-shrink: 1;
@@ -244,12 +295,15 @@ h2.page_title {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
                 @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                     font-size: 1.5em;
                 }
+
                 @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                     font-size: 1.25em;
                 }
+
                 &:first-child {
                     border-right: 1px solid #555;
                 }
@@ -283,12 +337,15 @@ h2.page_title {
             height: 450px;
             border: 10px solid #fff;
             transition: 0.3s ease-out;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 margin: 0 2%;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 margin: 0 2%;
             }
+
             &:hover,
             &:focus {
                 border: 10px solid #32ffcd;
@@ -301,9 +358,11 @@ h2.page_title {
                 margin: 0.5em 0 0.5em;
                 padding: 0.5em 1em;
                 display: flex;
+
                 @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                     font-size: 2.25em;
                 }
+
                 @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                     font-size: 1.75em;
                 }
@@ -360,9 +419,11 @@ h2.page_title {
         flex-shrink: 1;
         flex-basis: 50%;
         margin: 1em auto;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             flex-basis: 70%;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             flex-basis: 80%;
         }
@@ -370,9 +431,11 @@ h2.page_title {
         p {
             font-size: 2em;
             text-align: center;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 font-size: 1.75em;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 font-size: 1.5em;
             }
@@ -384,12 +447,15 @@ h2.page_title {
         flex-shrink: 1;
         flex-basis: 100%;
         margin: 4em auto 10em;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             margin: 4em auto 6em;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             margin: 4em auto;
         }
+
         #spin {
             margin: 0 auto;
             width: 200px;
@@ -460,9 +526,11 @@ h2.page_title {
         max-height: 400px;
         position: relative;
         margin: 4em auto 10em;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             margin: 4em auto 6em;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             margin: 4em auto;
         }
@@ -478,9 +546,11 @@ h2.page_title {
         flex-shrink: 1;
         flex-basis: 50%;
         margin: 1em auto;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             flex-basis: 70%;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             flex-basis: 80%;
         }
@@ -488,9 +558,11 @@ h2.page_title {
         p {
             font-size: 2em;
             text-align: center;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 font-size: 1.75em;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 font-size: 1.5em;
             }
@@ -536,14 +608,16 @@ h2.page_title {
             h3 {
                 text-align: center;
                 border-bottom: 1px solid #ddd;
-                font-size: 2.5em;
+                font-size: 3em;
                 margin: 0.5em 0 0.5em;
+                font-weight: bold;
 
                 small {
                     font-size: 1.25rem;
                     display: inline-block;
                     margin: 0 0.5em;
                     color: #555;
+                    font-weight: normal;
                 }
             }
 
@@ -551,9 +625,11 @@ h2.page_title {
                 width: 500px;
                 display: block;
                 margin: 0 auto;
+
                 @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                     width: 90%;
                 }
+
                 @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                     width: 90%;
                 }
@@ -578,9 +654,11 @@ h2.page_title {
         padding: 0 3em;
         margin-bottom: 10em;
         position: relative;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             margin: 3em auto 4em;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             margin: 3em auto 6em;
         }
@@ -630,9 +708,11 @@ h2.page_title {
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: 100%;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             flex-basis: 70%;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             flex-basis: 80%;
         }
@@ -642,9 +722,11 @@ h2.page_title {
             font-size: 3em;
             font-weight: bold;
             line-height: 1.75em;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 font-size: 2.55em;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 font-size: 2em;
             }
@@ -695,6 +777,7 @@ $height: $width * 1.75;
         height: 100%;
         top: 0;
         left: 0;
+        padding-right: 2em;
     }
 
     .charging_status {
@@ -754,9 +837,11 @@ $height: $width * 1.75;
                         background-clip: text;
                         -webkit-background-clip: text;
                         color: transparent;
+
                         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                             font-size: 8em;
                         }
+
                         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                             font-size: 6em;
                         }
@@ -831,12 +916,15 @@ $height: $width * 1.75;
                 left: 50%;
                 margin-left: calc($width / 2) * -1;
                 transform: rotate(90deg);
+
                 @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                     top: 18%;
                 }
+
                 @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                     top: 18%;
                 }
+
                 &:before {
                     content: '';
                     height: calc($width / 2px) * 0.6px;
@@ -913,9 +1001,11 @@ $height: $width * 1.75;
                     object-fit: contain;
                     width: 100%;
                 }
+
                 @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                     width: 100%;
                 }
+
                 @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                     width: 100%;
                 }
@@ -931,14 +1021,17 @@ $height: $width * 1.75;
             flex-flow: row wrap;
             align-content: flex-start;
             position: relative;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 flex-grow: 0;
                 flex-basis: 70%;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 flex-grow: 0;
                 flex-basis: 80%;
             }
+
             .not_yet {
                 position: absolute;
                 left: 50%;
@@ -947,66 +1040,115 @@ $height: $width * 1.75;
                 margin-left: -35%;
                 text-align: center;
                 display: none;
+
                 @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                     top: 10%;
                 }
+
                 @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                     top: 10%;
                 }
+
                 img {
                     width: 200px;
+
                     @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                         width: 150px;
                     }
+
                     @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                         width: 150px;
                     }
                 }
+
                 p {
                     font-size: 2em;
                     font-weight: bold;
                     line-height: 1.75em;
                 }
             }
+
             .charging_info {
                 width: 80%;
                 margin: 2em auto 1em;
                 background-color: #fff;
                 border-radius: 2em;
                 padding: 1em;
+
                 @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                     border-radius: 1.5em;
                 }
+
                 @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                     border-radius: 1.5em;
+                }
+                &.info_1 {
+                    ul {
+                        li {
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                width: 1em;
+                                height: 1em;
+                                border: none;
+                                top: 1.1em;
+                                left: -0.35em;
+                            }
+                            &:first-child {
+                                &:before {
+                                    background: url(../images/icon_li_power.svg) no-repeat center center;
+                                    background-size: contain;
+                                }
+                            }
+                            &:nth-child(2) {
+                                &:before {
+                                    background: url(../images/icon_li_money.svg) no-repeat center center;
+                                    background-size: contain;
+                                }
+                            }
+                            &:nth-child(3) {
+                                &:before {
+                                    background: url(../images/icon_li_time.svg) no-repeat center center;
+                                    background-size: contain;
+                                }
+                            }
+                        }
+                    }
                 }
                 ul {
                     list-style-type: none;
                     margin: 0 2em;
                     padding: 0;
+
                     @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                         margin: 0 1em;
                     }
+
                     @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                         margin: 0 1em;
                     }
+
                     li {
                         font-size: 2em;
                         font-weight: bold;
                         display: flex;
                         align-items: flex-end;
                         border-bottom: 1px solid #ddd;
-                        padding: 0.75em 0 0.75em 0.75em;
+                        padding: 0.75em 0 0.75em 1em;
                         position: relative;
+
                         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                             font-size: 1.5em;
                         }
+
                         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                             font-size: 1.2em;
                         }
+
                         &:last-child {
                             border: none !important;
                         }
+
                         &:before {
                             position: absolute;
                             content: '';
@@ -1018,6 +1160,7 @@ $height: $width * 1.75;
                             left: 0;
                             border-color: transparent transparent transparent $primaryColor;
                         }
+
                         span {
                             white-space: nowrap;
 
@@ -1080,11 +1223,13 @@ $height: $width * 1.75;
             justify-content: center;
             align-items: center;
             padding: 1em 2em;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 width: 660px;
                 height: 320px;
                 margin: 2em 0;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 width: 600px;
                 height: 280px;
@@ -1095,9 +1240,11 @@ $height: $width * 1.75;
                 flex-grow: 0;
                 flex-shrink: 1;
                 flex-basis: 220px;
+
                 @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                     flex-basis: 180px;
                 }
+
                 @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                     flex-basis: 160px;
                 }
@@ -1140,9 +1287,11 @@ $height: $width * 1.75;
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: 100%;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             flex-basis: 70%;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             flex-basis: 80%;
         }
@@ -1152,9 +1301,11 @@ $height: $width * 1.75;
             font-size: 3em;
             font-weight: bold;
             line-height: 1.75em;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 font-size: 2.55em;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 font-size: 2em;
             }
@@ -1176,21 +1327,26 @@ $height: $width * 1.75;
         max-height: 400px;
         position: relative;
         margin: 4em auto 10em;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             max-height: 360px;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             max-height: 320px;
         }
+
         img {
             max-height: auto;
             height: 250px;
             border: 20px solid $primaryColor;
             border-radius: 50%;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 border: 16px solid $primaryColor;
                 height: 220px;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 border: 16px solid $primaryColor;
                 height: 200px;
@@ -1202,9 +1358,11 @@ $height: $width * 1.75;
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: 100%;
+
         @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
             flex-basis: 70%;
         }
+
         @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
             flex-basis: 80%;
         }
@@ -1214,9 +1372,11 @@ $height: $width * 1.75;
             font-size: 3em;
             font-weight: bold;
             line-height: 1.75em;
+
             @media screen and (min-width: $breakpoint_XL) and (max-width: 1919px) {
                 font-size: 2.55em;
             }
+
             @media screen and (min-width: 1023px) and (max-width: $breakpoint_L) {
                 font-size: 2em;
             }
